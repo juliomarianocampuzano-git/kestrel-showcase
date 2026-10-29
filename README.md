@@ -2,6 +2,8 @@
 
 Public, independent landing page and interactive demo for an AI Act + GDPR evidence workspace.
 
+The refreshed frontend uses the Quiet momentum visual system: petrol, water green, lime accents and locally hosted Manrope. It includes an interactive product walkthrough, currency display controls, mobile navigation, FAQs and a revised workspace dashboard. Reference choices and scope are documented in [DESIGN.md](docs/DESIGN.md).
+
 **Demo – sample data.** Every company, person, tool, review and training record is fictional. The default workspace is Northwind Studio: 14 tools, 23 employees, 18 sample completions and 3 pending tool reviews.
 
 ![Northwind Studio overview](docs/screenshots/overview.png)

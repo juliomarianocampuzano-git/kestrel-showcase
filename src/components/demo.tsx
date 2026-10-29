@@ -42,6 +42,7 @@ import {
 import Papa from "papaparse";
 import { Logo, Language, Pill, useLocale } from "./ui";
 import { getDictionary } from "@/lib/i18n";
+import { designCopy } from "@/lib/design-copy";
 import { getSampleWorkspace } from "@/lib/mock-api";
 import {
   sampleTools,
@@ -100,6 +101,7 @@ const blank: Tool = {
 export default function Demo() {
   const { locale, setLocale } = useLocale();
   const t = getDictionary(locale);
+  const d = designCopy[locale];
   const [tab, setTab] = useState<Tab>("overview");
   const [toolSets, setToolSets] = useState<Record<string, Tool[]>>({
     "Northwind Studio": sampleTools,
@@ -454,7 +456,10 @@ export default function Demo() {
   ];
   const activities = [...events, ...sampleActivity];
   return (
-    <div className="app-shell">
+    <div className="app-shell" data-view={tab}>
+      <a className="skip-link" href="#workspace-main">
+        {d.skip}
+      </a>
       {mobile && (
         <button
           className="sidebar-close"
@@ -480,6 +485,7 @@ export default function Demo() {
               <button
                 key={k}
                 className={tab === k ? "active" : ""}
+                aria-current={tab === k ? "page" : undefined}
                 onClick={() => go(k)}
               >
                 <Icon size={16} />
@@ -497,6 +503,7 @@ export default function Demo() {
               <button
                 key={k}
                 className={tab === k ? "active" : ""}
+                aria-current={tab === k ? "page" : undefined}
                 onClick={() => go(k)}
               >
                 <Icon size={16} />
@@ -559,7 +566,7 @@ export default function Demo() {
             <ArrowUpRight size={11} />
           </a>
         </div>
-        <main className="dashboard-main">
+        <main className="dashboard-main" id="workspace-main">
           <div className="page-heading">
             <div>
               <p className="eyebrow">{t.updated.toUpperCase()}</p>
@@ -596,6 +603,19 @@ export default function Demo() {
           )}
           {tab === "overview" && (
             <>
+              <div className="workspace-shortcuts">
+                <p>{d.quickTitle}</p>
+                <button onClick={() => go("inventory")}>
+                  <Layers size={16} />
+                  {d.quickInventory}
+                  <ArrowUpRight size={14} />
+                </button>
+                <button onClick={() => go("training")}>
+                  <BookOpen size={16} />
+                  {d.quickTraining}
+                  <ArrowUpRight size={14} />
+                </button>
+              </div>
               <div className="stat-grid">
                 {[
                   [
@@ -663,7 +683,7 @@ export default function Demo() {
                       className="donut"
                       style={{
                         background: stats.total
-                          ? `conic-gradient(#427c67 0% ${(stats.low / stats.total) * 100}%,#dcaf69 ${(stats.low / stats.total) * 100}% ${((stats.low + stats.transparency) / stats.total) * 100}%,#c77969 ${((stats.low + stats.transparency) / stats.total) * 100}% 100%)`
+                          ? `conic-gradient(#168779 0% ${(stats.low / stats.total) * 100}%,#e8bb65 ${(stats.low / stats.total) * 100}% ${((stats.low + stats.transparency) / stats.total) * 100}%,#e39072 ${((stats.low + stats.transparency) / stats.total) * 100}% 100%)`
                           : "#eee",
                       }}
                     >
@@ -1287,6 +1307,7 @@ export default function Demo() {
       </div>
       <dialog
         ref={editDialog}
+        aria-label={editing?.id ? t.edit : t.newTool}
         onClose={() => {
           setEditing(null);
           setError("");
@@ -1350,7 +1371,11 @@ export default function Demo() {
           </form>
         )}
       </dialog>
-      <dialog ref={detailDialog} onClose={() => setSelected(null)}>
+      <dialog
+        ref={detailDialog}
+        aria-label={selected?.name || t.details}
+        onClose={() => setSelected(null)}
+      >
         <div className="modal-header">
           <h2>{selected?.name}</h2>
           <button
@@ -1396,7 +1421,11 @@ export default function Demo() {
           </div>
         )}
       </dialog>
-      <dialog ref={courseDialog} onClose={() => setCourse(false)}>
+      <dialog
+        ref={courseDialog}
+        aria-label={t.course}
+        onClose={() => setCourse(false)}
+      >
         <div className="modal-header">
           <h2>{t.course}</h2>
           <button
