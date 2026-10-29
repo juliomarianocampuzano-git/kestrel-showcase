@@ -1,4 +1,5 @@
-// Optional independent mock endpoint. The static demo also works without it.
+// Independent public mock endpoint. Contains only fictional data.
+import { sampleTools, sampleEmployees } from "../src/lib/demo";
 interface Env {
   DEMO_LIMITER: {
     limit(input: { key: string }): Promise<{ success: boolean }>;
@@ -7,6 +8,7 @@ interface Env {
 export default {
   async fetch(request: Request, env: Env) {
     const headers = {
+      "access-control-allow-origin": "*",
       "content-type": "application/json",
       "cache-control": "no-store",
       "x-content-type-options": "nosniff",
@@ -24,7 +26,18 @@ export default {
         status: 429,
         headers: { ...headers, "retry-after": "60" },
       });
-    if (new URL(request.url).pathname !== "/api/demo/summary")
+    const path = new URL(request.url).pathname;
+    if (path === "/api/demo/workspace")
+      return new Response(
+        JSON.stringify({
+          label: "Demo – sample data",
+          company: "Northwind Studio",
+          tools: sampleTools,
+          employees: sampleEmployees,
+        }),
+        { headers },
+      );
+    if (path !== "/api/demo/summary")
       return new Response(JSON.stringify({ error: "Not found" }), {
         status: 404,
         headers,

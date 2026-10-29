@@ -47,9 +47,9 @@ The [visual tour](public/media/kestrel-tour.mp4) is a video assembled from actua
 
 ## Public boundary
 
-This repository is self-contained. It has no dependency on the private application, production database, scoring rules, full question bank, prompts, document generator or payment account. Its API consists of local fictional fixtures. An optional, separate Cloudflare Worker exposes a rate-limited mock summary.
+This repository is self-contained. It has no dependency on the private application, production database, scoring rules, full question bank, prompts, document generator or payment account. The demo loads fictional inventory fixtures from a separate rate-limited Cloudflare Worker, with a bundled fallback if the endpoint is unavailable. All mutations remain browser-local.
 
-Never configure production secrets here. `.env.example` contains only a public label. `npm run check:boundary` checks tracked source candidates for private imports and common secret patterns; it complements, rather than replaces, a full secret scanner.
+Never configure production secrets here. `.env.example` contains only public demo configuration. `npm run check:boundary` checks tracked source candidates for private imports and common secret patterns; it complements, rather than replaces, a full secret scanner.
 
 ## Fictional seed and sample documents
 

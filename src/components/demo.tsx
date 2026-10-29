@@ -42,6 +42,7 @@ import {
 import Papa from "papaparse";
 import { Logo, Language, Pill, useLocale } from "./ui";
 import { getDictionary } from "@/lib/i18n";
+import { getSampleWorkspace } from "@/lib/mock-api";
 import {
   sampleTools,
   sampleEmployees,
@@ -167,6 +168,21 @@ export default function Demo() {
       localStorage.removeItem(storage);
     }
     setLoaded(true);
+  }, []);
+  useEffect(() => {
+    let active = true;
+    void getSampleWorkspace().then((sample) => {
+      if (active)
+        setToolSets((previous) =>
+          JSON.stringify(previous["Northwind Studio"]) ===
+          JSON.stringify(sampleTools)
+            ? { ...previous, "Northwind Studio": sample.tools }
+            : previous,
+        );
+    });
+    return () => {
+      active = false;
+    };
   }, []);
   useEffect(() => {
     if (loaded) {
