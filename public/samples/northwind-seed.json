@@ -1,0 +1,332 @@
+{
+  "label": "Demo – sample data",
+  "company": "Northwind Studio",
+  "tools": [
+    {
+      "id": "t01",
+      "name": "Assist Chat",
+      "category": "Writing",
+      "owner": "Sofia Bennett",
+      "purpose": "Draft internal briefs",
+      "risk": "Low",
+      "status": "Reviewed",
+      "personalData": false
+    },
+    {
+      "id": "t02",
+      "name": "Codewing",
+      "category": "Development",
+      "owner": "Oliver Reed",
+      "purpose": "Suggest code changes",
+      "risk": "Low",
+      "status": "Reviewed",
+      "personalData": false
+    },
+    {
+      "id": "t03",
+      "name": "Canvas AI",
+      "category": "Design",
+      "owner": "Emma Rossi",
+      "purpose": "Create concept illustrations",
+      "risk": "Transparency",
+      "status": "Reviewed",
+      "personalData": false
+    },
+    {
+      "id": "t04",
+      "name": "Meetnote",
+      "category": "Productivity",
+      "owner": "Liam Costa",
+      "purpose": "Summarize client meetings",
+      "risk": "Transparency",
+      "status": "Needs review",
+      "personalData": true
+    },
+    {
+      "id": "t05",
+      "name": "Support Finch",
+      "category": "Customer service",
+      "owner": "Mia Laurent",
+      "purpose": "Answer customer questions",
+      "risk": "Transparency",
+      "status": "Reviewed",
+      "personalData": true
+    },
+    {
+      "id": "t06",
+      "name": "Voice Loom",
+      "category": "Audio",
+      "owner": "Noah Silva",
+      "purpose": "Generate synthetic narration",
+      "risk": "Transparency",
+      "status": "Needs review",
+      "personalData": false
+    },
+    {
+      "id": "t07",
+      "name": "Search Nest",
+      "category": "Research",
+      "owner": "Ava Martin",
+      "purpose": "Find reference materials",
+      "risk": "Low",
+      "status": "Reviewed",
+      "personalData": false
+    },
+    {
+      "id": "t08",
+      "name": "Slide Craft",
+      "category": "Presentations",
+      "owner": "Ethan Moretti",
+      "purpose": "Draft pitch presentations",
+      "risk": "Low",
+      "status": "Reviewed",
+      "personalData": false
+    },
+    {
+      "id": "t09",
+      "name": "Talent Lens",
+      "category": "People",
+      "owner": "Isabella Clark",
+      "purpose": "Rank job applicants",
+      "risk": "Review",
+      "status": "Needs review",
+      "personalData": true
+    },
+    {
+      "id": "t10",
+      "name": "Translate Brook",
+      "category": "Language",
+      "owner": "Lucas Ferri",
+      "purpose": "Translate project briefs",
+      "risk": "Low",
+      "status": "Reviewed",
+      "personalData": false
+    },
+    {
+      "id": "t11",
+      "name": "Sheet Pilot",
+      "category": "Analytics",
+      "owner": "Charlotte King",
+      "purpose": "Explore sample sales data",
+      "risk": "Low",
+      "status": "Reviewed",
+      "personalData": false
+    },
+    {
+      "id": "t12",
+      "name": "Clip Studio AI",
+      "category": "Video",
+      "owner": "Henry Blake",
+      "purpose": "Create synthetic video scenes",
+      "risk": "Transparency",
+      "status": "Reviewed",
+      "personalData": false
+    },
+    {
+      "id": "t13",
+      "name": "Mail Sprout",
+      "category": "Marketing",
+      "owner": "Amelia Hughes",
+      "purpose": "Draft campaign messages",
+      "risk": "Low",
+      "status": "Reviewed",
+      "personalData": false
+    },
+    {
+      "id": "t14",
+      "name": "Insight Grove",
+      "category": "Analytics",
+      "owner": "James Walker",
+      "purpose": "Summarize anonymous surveys",
+      "risk": "Low",
+      "status": "Reviewed",
+      "personalData": false
+    }
+  ],
+  "employees": [
+    {
+      "id": "e1",
+      "name": "Sofia Bennett",
+      "team": "Design",
+      "completed": true,
+      "progress": 100,
+      "date": "2026-10-21"
+    },
+    {
+      "id": "e2",
+      "name": "Oliver Reed",
+      "team": "Engineering",
+      "completed": true,
+      "progress": 100,
+      "date": "2026-10-21"
+    },
+    {
+      "id": "e3",
+      "name": "Emma Rossi",
+      "team": "Operations",
+      "completed": true,
+      "progress": 100,
+      "date": "2026-10-21"
+    },
+    {
+      "id": "e4",
+      "name": "Liam Costa",
+      "team": "Client services",
+      "completed": true,
+      "progress": 100,
+      "date": "2026-10-21"
+    },
+    {
+      "id": "e5",
+      "name": "Mia Laurent",
+      "team": "Design",
+      "completed": true,
+      "progress": 100,
+      "date": "2026-10-21"
+    },
+    {
+      "id": "e6",
+      "name": "Noah Silva",
+      "team": "Engineering",
+      "completed": true,
+      "progress": 100,
+      "date": "2026-10-21"
+    },
+    {
+      "id": "e7",
+      "name": "Ava Martin",
+      "team": "Operations",
+      "completed": true,
+      "progress": 100,
+      "date": "2026-10-21"
+    },
+    {
+      "id": "e8",
+      "name": "Ethan Moretti",
+      "team": "Client services",
+      "completed": true,
+      "progress": 100,
+      "date": "2026-10-21"
+    },
+    {
+      "id": "e9",
+      "name": "Isabella Clark",
+      "team": "Design",
+      "completed": true,
+      "progress": 100,
+      "date": "2026-10-21"
+    },
+    {
+      "id": "e10",
+      "name": "Lucas Ferri",
+      "team": "Engineering",
+      "completed": true,
+      "progress": 100,
+      "date": "2026-10-21"
+    },
+    {
+      "id": "e11",
+      "name": "Charlotte King",
+      "team": "Operations",
+      "completed": true,
+      "progress": 100,
+      "date": "2026-10-21"
+    },
+    {
+      "id": "e12",
+      "name": "Henry Blake",
+      "team": "Client services",
+      "completed": true,
+      "progress": 100,
+      "date": "2026-10-21"
+    },
+    {
+      "id": "e13",
+      "name": "Amelia Hughes",
+      "team": "Design",
+      "completed": true,
+      "progress": 100,
+      "date": "2026-10-21"
+    },
+    {
+      "id": "e14",
+      "name": "James Walker",
+      "team": "Engineering",
+      "completed": true,
+      "progress": 100,
+      "date": "2026-10-21"
+    },
+    {
+      "id": "e15",
+      "name": "Harper Brooks",
+      "team": "Operations",
+      "completed": true,
+      "progress": 100,
+      "date": "2026-10-21"
+    },
+    {
+      "id": "e16",
+      "name": "Benjamin Hayes",
+      "team": "Client services",
+      "completed": true,
+      "progress": 100,
+      "date": "2026-10-21"
+    },
+    {
+      "id": "e17",
+      "name": "Evelyn Stone",
+      "team": "Design",
+      "completed": true,
+      "progress": 100,
+      "date": "2026-10-21"
+    },
+    {
+      "id": "e18",
+      "name": "Daniel Quinn",
+      "team": "Engineering",
+      "completed": true,
+      "progress": 100,
+      "date": "2026-10-21"
+    },
+    {
+      "id": "e19",
+      "name": "Abigail Green",
+      "team": "Operations",
+      "completed": false,
+      "progress": 60,
+      "date": null
+    },
+    {
+      "id": "e20",
+      "name": "Leo West",
+      "team": "Client services",
+      "completed": false,
+      "progress": 60,
+      "date": null
+    },
+    {
+      "id": "e21",
+      "name": "Emily Archer",
+      "team": "Design",
+      "completed": false,
+      "progress": 60,
+      "date": null
+    },
+    {
+      "id": "e22",
+      "name": "Samuel Fox",
+      "team": "Engineering",
+      "completed": false,
+      "progress": 0,
+      "date": null
+    },
+    {
+      "id": "e23",
+      "name": "Grace Lane",
+      "team": "Operations",
+      "completed": false,
+      "progress": 0,
+      "date": null
+    }
+  ]
+}

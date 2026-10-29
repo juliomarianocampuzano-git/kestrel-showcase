@@ -1,0 +1,10 @@
+{
+  "label": "Demo - sample data",
+  "signed": false,
+  "algorithm": "SHA-256",
+  "files": {
+    "northwind-evidence.pdf": "cd1762d0da195685b418de4daff114d65eb5cd07841a5f0464370480632bea2a",
+    "northwind-evidence.docx": "bf4f65a1ea55e3864be9b46e06faf7c978af239adcb841235ede0cbc3ed1edca",
+    "sample-certificate.pdf": "7d759cfd1e9660a82aef76fcfe36973700991c0809b50b1f32eb8149a44ce53c"
+  }
+}

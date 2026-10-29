@@ -1,0 +1,8 @@
+name = "kestrel-demo-api"
+main = "index.ts"
+compatibility_date = "2026-10-29"
+
+[[ratelimits]]
+name = "DEMO_LIMITER"
+namespace_id = "1001"
+simple = { limit = 30, period = 60 }
